@@ -11,7 +11,7 @@ urlpatterns = [
     path('api/neighborhood/', views.NeighList.as_view(),name='neighborhood'),
     path('api/occupantlist/', views.OccupantList.as_view(),name='occupant'),
     path('api/business/', views.BusinessList.as_view(),name='business'),
-
-
+    path('register/',views.register,name='register'),
+    path('login/',LoginView.as_view(), name='login'),
     
 ]
