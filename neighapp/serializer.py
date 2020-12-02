@@ -19,5 +19,5 @@ class OccupantSerializer(serializers.ModelSerializer):
 class BusinessSerializer(serializers.ModelSerializer):
     class Meta:
         model = Business
-        fields = ('name', 'definition','email','neighbourhood','location')
+        fields = ('name', 'description','email','neighbourhood','location')
 
