@@ -12,7 +12,7 @@ class AdminProfile(models.Model):
     bio = models.CharField(max_length=255)
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.username} AdminProfile'
 
     class Meta:
-        db_table = 'profile'
+        db_table = 'adminprof'
