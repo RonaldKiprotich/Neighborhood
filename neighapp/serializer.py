@@ -4,7 +4,7 @@ from .models import *
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminProfile
-        fields = ('user', 'profile_pic', 'bio')
+        fields = ('user', 'profile_picture', 'bio')
 
 class NeighSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,10 +14,10 @@ class NeighSerializer(serializers.ModelSerializer):
 class OccupantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Occupant
-        fields = ('user', 'name', 'profile_pic','neighborhood')
+        fields = ('user', 'name', 'profile_pic','neighbourhood')
 
 class BusinessSerializer(serializers.ModelSerializer):
     class Meta:
         model = Business
-        fields = ('name', 'definition','email','neighborhood','location')
+        fields = ('name', 'definition','email','neighbourhood','location')
 
