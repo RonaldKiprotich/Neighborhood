@@ -21,3 +21,12 @@ class BusinessSerializer(serializers.ModelSerializer):
         model = Business
         fields = ('name', 'description','email','neighbourhood','location')
 
+class UserSignupSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'is_staff', 'password']
+
+    def create(self, validated_data):
+        validated_data['password'] = make_password(validated_data.get('password'))
+        return super(UserSerializer, self).create(validated_data)
+
