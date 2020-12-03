@@ -8,13 +8,27 @@ from rest_framework import viewsets,status,generics
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework.permissions import IsAuthenticated
+from .permissions import IsAdminOrReadOnly
+from django.http import HttpResponse, Http404
+
 # Create your views here.
 
 class AdminProfileList(APIView):
-    def get(self, request, format=None):
-        all_merch = AdminProfile.objects.all()
-        serializers = ProfileSerializer(all_merch, many=True)
-        return Response(serializers.data)
+    permission_classes = (IsAdminOrReadOnly,)
+
+
+    def get_profile(self, pk):
+        try:
+            return AdminProfile.objects.get(pk=pk)
+        except AdminProfile.DoesNotExist:
+            return Http404
+
+    def patch(self, request, pk, format=None):
+        profile = self.get_profile(pk)
+        serializers = ProfileSerializer(profile, request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data)
 
 class NeighList(APIView):
     def get(self, request, format=None):
@@ -71,3 +85,4 @@ class PostList(APIView):
             serializers.save()
             return Response(serializers.data, status=status.HTTP_201_CREATED)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)   
+

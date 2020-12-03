@@ -29,5 +29,6 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('logout/',views.LogoutAPIView.as_view(),name='logout'),
     path('api/v1/post/',views.PostList.as_view()),
+    path('api/v1/profile/<pk>/',views.AdminProfileList.as_view()),
     
 ]

@@ -2,9 +2,13 @@ from rest_framework import serializers
 from .models import *
 from django.contrib.auth.hashers import make_password
 class ProfileSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
+
         model = AdminProfile
         fields = ('user', 'profile_picture', 'bio')
+
 
 class NeighSerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,3 +43,4 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model =  Post
         fields = ['title', 'text', 'user','date','neighbourhood'] 
+
