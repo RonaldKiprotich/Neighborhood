@@ -34,3 +34,8 @@ class UserSignupSerializer(serializers.ModelSerializer):
 
 class LogoutSerializer(serializers.Serializer):
     refresh_token=serializers.CharField()
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model =  Post
+        fields = ['title', 'text', 'user','date','neighbourhood'] 

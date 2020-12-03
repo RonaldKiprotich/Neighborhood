@@ -61,3 +61,13 @@ class LogoutAPIView(generics.CreateAPIView):
         except TokenError as error:
             return Response(error_message,status=status.HTTP_400_BAD_REQUEST)
         return Response(success_message,status=status.HTTP_200_OK)
+
+
+class PostList(APIView):
+
+    def post(self, request, format=None):
+        serializers = PostSerializer(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)   
