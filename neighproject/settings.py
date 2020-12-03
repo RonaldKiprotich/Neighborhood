@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'bootstrap3',
     'neighapp',
+    'knox',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
