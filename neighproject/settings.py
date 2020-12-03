@@ -77,8 +77,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework_simplejwt.token_blacklist' 
-]
+    'rest_framework_simplejwt.token_blacklist',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,7 +124,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'neighborhood',
         'USER': 'moringa',
-    'PASSWORD':'colo1234',
+    'PASSWORD':'Raykip254',
     }
 }
 
