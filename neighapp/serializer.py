@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import *
-
+from django.contrib.auth.hashers import make_password
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminProfile
@@ -21,12 +21,16 @@ class BusinessSerializer(serializers.ModelSerializer):
         model = Business
         fields = ('name', 'description','email','neighbourhood','location')
 
-class UserSignupSerializer(serializers.HyperlinkedModelSerializer):
+class UserSignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'is_staff', 'password']
-
+        fields = ['username', 'email', 'password']
+        extra_kwargs={
+            'password':{'write_only':True}
+        }
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data.get('password'))
-        return super(UserSerializer, self).create(validated_data)
+        return super(UserSignupSerializer, self).create(validated_data)
 
+class LogoutSerializer(serializers.Serializer):
+    refresh_token=serializers.CharField()
