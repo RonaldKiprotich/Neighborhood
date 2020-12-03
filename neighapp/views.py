@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import *
 from .forms import RegistrationForm
+from rest_framework import viewsets
 
 # Create your views here.
 
@@ -31,6 +32,13 @@ class BusinessList(APIView):
         serializers = BusinessSerializer(all_merch, many=True)
         return Response(serializers.data)
 
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing user instances.
+    """
+    serializer_class = UserSignupSerializer
+    queryset = User.objects.all()
 
 
 
