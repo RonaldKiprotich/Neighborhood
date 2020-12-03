@@ -32,3 +32,4 @@ swapper==1.1.2.post1
 urllib3==1.26.2
 whitenoise==5.2.0
 zipp==3.4.0
+djangorestframework-jwt==1.11.0
