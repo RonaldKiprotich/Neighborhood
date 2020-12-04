@@ -73,3 +73,20 @@ class Business(models.Model):
     def search_business(cls, name):
         return cls.objects.filter(name__icontains=name).all()
 
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    text = models.TextField()
+    user = models.ForeignKey(User,on_delete=models.CASCADE,default = '')
+    date = models.DateField(auto_now_add=True)
+    neighbourhood = models.ForeignKey(NeighbourHood,on_delete=models.CASCADE, default='', null=True, blank=True)
+
+
+    def __str__(self):
+        return f'{self.title} Post'
+
+    def save_post(self):
+        self.save()
+
+    def delete_post(self):
+        self.delete()
+

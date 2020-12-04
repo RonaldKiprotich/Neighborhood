@@ -2,9 +2,13 @@ from rest_framework import serializers
 from .models import *
 from django.contrib.auth.hashers import make_password
 class ProfileSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
+
         model = AdminProfile
         fields = ('user', 'profile_picture', 'bio')
+
 
 class NeighSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,7 +28,7 @@ class BusinessSerializer(serializers.ModelSerializer):
 class UserSignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['first_name','last_name','username','password']
         extra_kwargs={
             'password':{'write_only':True}
         }
@@ -34,3 +38,9 @@ class UserSignupSerializer(serializers.ModelSerializer):
 
 class LogoutSerializer(serializers.Serializer):
     refresh_token=serializers.CharField()
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model =  Post
+        fields = ['title', 'text', 'user','date','neighbourhood'] 
+
