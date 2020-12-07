@@ -83,5 +83,6 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at protich12@gmail.com.
   
 
-### License
-**[MIT](./LICENSE)** (c) 2020 **[Ronald Kiprotich]()** and **[Collins Kipkoech]()**
+## License
+* [[License: MIT]](LICENSE.md)
+* Copyright (c) 2020 **Ronald Kiprotich** **Collins Kipkoech**
