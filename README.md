@@ -74,6 +74,9 @@ Open the application on your browser `127.0.0.1:8000`.
 * [Python3.6](https://www.python.org/)  
 * [Django 1.11](https://docs.djangoproject.com/en/1.1/)  
 * [Heroku](https://heroku.com)  
+
+## Figma Design
+[View Design](https://1drv.ms/p/s!AhtkLGb6CU57hh5WwxwWiOG9TqdA?e=VNHhW7)
   
   
 ## Known Bugs  
