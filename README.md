@@ -3,9 +3,9 @@
 ##### By [Ronald Kiprotich](https://github.com/RonaldKiprotich) and [Collins Kipkoech](https://github.com/kipkoech-msojo)
 
 
-Back end live site: [View Site](https://rayneighborhood.herokuapp.com/)
-Front end repository: [View](https://github.com/felkiriinya/Neighbourhood-Frontend)
-Front end live site: [View Site](https://neighbourhoodgroup.netlify.app/)
+* Back end live site: [View Site](https://rayneighborhood.herokuapp.com/)
+* Front end repository: [View](https://github.com/felkiriinya/Neighbourhood-Frontend)
+* Front end live site: [View Site](https://neighbourhoodgroup.netlify.app/)
   
 # Description  
 This is a neighborhood application where a user have to signup first and be able to view different neighbourhoods. A user can join or leave a neighbourhood and once he/she joins, they can view information about that neighbourhood.
@@ -85,4 +85,4 @@ If you have any question or contributions, please email me at protich12@gmail.co
 
 ## License
 * [[License: MIT]](LICENSE.md)
-* Copyright (c) 2020 **Ronald Kiprotich** **Collins Kipkoech**
+* Copyright (c) 2020 **Ronald Kiprotich**||**Collins Kipkoech**
