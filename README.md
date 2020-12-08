@@ -2,10 +2,26 @@
 
 ##### By [Ronald Kiprotich](https://github.com/RonaldKiprotich) and [Collins Kipkoech](https://github.com/kipkoech-msojo)
 
-
+## Links
+* Back end repository: [View](https://github.com/RonaldKiprotich/Neighborhood.git)
 * Back end live site: [View Site](https://rayneighborhood.herokuapp.com/)
 * Front end repository: [View](https://github.com/felkiriinya/Neighbourhood-Frontend)
 * Front end live site: [View Site](https://neighbourhoodgroup.netlify.app/)
+
+## End Points.
+* https://rayneighborhood.herokuapp.com/api/adminprofile/
+* https://rayneighborhood.herokuapp.com/api/occupantlist/
+* https://rayneighborhood.herokuapp.com/api/neighborhood/
+* https://rayneighborhood.herokuapp.com/auth/signup/
+* https://rayneighborhood.herokuapp.com/api/business/
+* https://rayneighborhood.herokuapp.com/api/v1/post/
+* https://rayneighborhood.herokuapp.com/api/token/
+* https://rayneighborhood.herokuapp.com/api/token/refresh/
+* https://rayneighborhood.herokuapp.com/logout/
+* https://rayneighborhood.herokuapp.com/api/v1/profile/
+
+
+
   
 # Description  
 This is a neighborhood application where a user have to signup first and be able to view different neighbourhoods. A user can join or leave a neighbourhood and once he/she joins, they can view information about that neighbourhood.
