@@ -77,6 +77,10 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Figma Design
 [View Design](https://1drv.ms/p/s!AhtkLGb6CU57hh5WwxwWiOG9TqdA?e=VNHhW7)
+
+## ERD Diagram
+
+* https://drive.google.com/file/d/1o488_x9x5Dk6rLW-Y-N8P8L7nCEw5TjO/view?usp=sharing
   
   
 ## Known Bugs  
